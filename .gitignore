@@ -20,3 +20,5 @@ cabal.sandbox.config
 *~
 \#*
 backend.cabal
+.vscode/
+.vscode/*
