@@ -1,9 +1,0 @@
-stages:
-  - build
-  - test
-  - deploy
-
-build:
-  stage: build
-  image: fpco/stack-build
-  script:
