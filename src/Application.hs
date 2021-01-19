@@ -59,10 +59,6 @@ makeFoundation :: AppSettings -> IO App
 makeFoundation appSettings = do
     -- Some basic initializations: HTTP connection manager, logger, and static
     -- subsite.
-    --
-        menv <- readMay <$> getEnv "YESOD_ENVIRONMENT"
-        let environment = maybe Development id menv -- default to Development
-    --
     appHttpManager <- getGlobalManager
     appLogger <- newStdoutLoggerSet defaultBufSize >>= makeYesodLogger
     appStatic <-
