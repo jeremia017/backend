@@ -14,6 +14,8 @@ machine git.heroku.com
   password $HEROKU_API_KEY
 EOF
 
+sudo apt-get -yq update
+sudo apt-get -yqq install ssh
 # Add heroku.com to the list of known hosts
 mkdir ~/.ssh/
 touch ~/.ssh/known_hosts
