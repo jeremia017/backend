@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 855031e55d2d431fd306a58bbdbdff51f980a69b717c49721df882fe5ba38206
+-- hash: 0015a4ebc2d509c312fbacdb9e4fd27ae6e9fbc70512627b3e30c08eb57c0bcf
 
 name:           backend
 version:        0.0.0
@@ -58,7 +58,7 @@ library
     , monad-control >=0.3 && <1.1
     , monad-logger >=0.3 && <0.4
     , persistent >=2.9 && <2.11
-    , persistent-sqlite >=2.9 && <2.11
+    , persistent-postgresql >=2.9 && <2.11
     , persistent-template >=2.5 && <2.9
     , safe
     , shakespeare >=2.0 && <2.1
@@ -114,7 +114,7 @@ executable backend
     , monad-control >=0.3 && <1.1
     , monad-logger >=0.3 && <0.4
     , persistent >=2.9 && <2.11
-    , persistent-sqlite >=2.9 && <2.11
+    , persistent-postgresql >=2.9 && <2.11
     , persistent-template >=2.5 && <2.9
     , safe
     , shakespeare >=2.0 && <2.1
@@ -170,11 +170,10 @@ test-suite backend-test
     , hspec >=2.0.0
     , http-client-tls >=0.3 && <0.4
     , http-conduit >=2.3 && <2.4
-    , microlens
     , monad-control >=0.3 && <1.1
     , monad-logger >=0.3 && <0.4
     , persistent >=2.9 && <2.11
-    , persistent-sqlite >=2.9 && <2.11
+    , persistent-postgresql >=2.9 && <2.11
     , persistent-template >=2.5 && <2.9
     , safe
     , shakespeare >=2.0 && <2.1
