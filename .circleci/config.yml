@@ -31,11 +31,6 @@ jobs:
           command: |
             stack --local-bin-path ~/app/dist install yesod-bin --install-ghc
 
-      - run:
-          name: Run tests
-          command: |
-            stack test
-
       - save_cache:
           key: stack-work-cache-{{ arch }}
           paths:
