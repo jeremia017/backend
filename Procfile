@@ -1,1 +1,1 @@
-web: dist/backend production -p $PORT
+web: dist/backend
