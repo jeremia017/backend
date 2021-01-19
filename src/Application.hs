@@ -35,7 +35,6 @@ import Network.Wai.Middleware.RequestLogger (Destination (Logger),
                                              IPAddrSource (..),
                                              OutputFormat (..), destination,
                                              mkRequestLogger, outputFormat)
-import Network.Wai.Middleware.ForceSSL
 import System.Log.FastLogger                (defaultBufSize, newStdoutLoggerSet,
                                              toLogStr)
 
@@ -93,15 +92,9 @@ makeFoundation appSettings = do
 makeApplication :: App -> IO Application
 makeApplication foundation = do
     logWare <- makeLogWare foundation
-    let sslWare = makeSSLWare foundation
     -- Create the WAI application and apply middlewares
     appPlain <- toWaiAppPlain foundation
-    return $ sslWare $ logWare $ defaultMiddlewaresNoLogging appPlain
-
-makeSSLWare :: App -> Middleware
-makeSSLWare App{..} = case environment of
-                          Production -> forceSSL
-                          Development -> id
+    return $ logWare $ defaultMiddlewaresNoLogging appPlain
 
 makeLogWare :: App -> IO Middleware
 makeLogWare foundation =
