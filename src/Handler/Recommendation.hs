@@ -15,9 +15,7 @@ getRecommendation1R recommendationId = do
 
 postRecommendation2R :: Handler Value
 postRecommendation2R = do
-    addHeader "Access-Control-Allow-Origin" "*"
-    addHeader "Access-Control-Allow-Methods" "*"
-    recommendation <- requireInsecureJsonBody :: Handler Recommendation
+    recommendation <- requireCheckJsonBody :: Handler Recommendation
     recommendationId <- runDB $ insert recommendation
 
     sendStatusJSON ok200 (object ["recommendationId" .= recommendationId])
