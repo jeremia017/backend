@@ -12,3 +12,9 @@
 /comments CommentR POST
 
 /profile ProfileR GET
+
+/recommendation/#RecommendationId Recommendation1R GET
+
+/recommendation Recommendation2R POST
+
+/recommendations RecommendationsR GET
