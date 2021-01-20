@@ -8,12 +8,12 @@ ip-from-header: "_env:YESOD_IP_FROM_HEADER:false"
 
 # Default behavior: determine the application root from the request headers.
 # Uncomment to set an explicit approot
-approot:        "_env:YESOD_APPROOT:http://backend-animentor.herokuapp.com/"
+#approot:        "_env:YESOD_APPROOT:http://localhost:3000"
 
 # By default, `yesod devel` runs in development, and built executables use
 # production settings (see below). To override this, use the following:
 #
-development: false
+# development: false
 
 # Optional values with the following production defaults.
 # In development, they default to the inverse.
@@ -29,12 +29,12 @@ development: false
 # See https://github.com/yesodweb/yesod/wiki/Configuration#parsing-numeric-values-as-strings
 
 database:
-  user:     "_env:YESOD_PGUSER:hysgntpnxrbvds"
-  password: "_env:YESOD_PGPASS:7c8f7a899b09fe01cadc799c63297c4bdea42d9259a98aa39977f3d966ca4007"
-  host:     "_env:YESOD_PGHOST:ec2-52-2-82-109.compute-1.amazonaws.com"
+  user:     "_env:YESOD_PGUSER:backend"
+  password: "_env:YESOD_PGPASS:backend"
+  host:     "_env:YESOD_PGHOST:localhost"
   port:     "_env:YESOD_PGPORT:5432"
   # See config/test-settings.yml for an override during tests
-  database: "_env:YESOD_PGDATABASE:d82k4pph4e23kb"
+  database: "_env:YESOD_PGDATABASE:backend"
   poolsize: "_env:YESOD_PGPOOLSIZE:10"
 
 copyright: Insert copyright statement here

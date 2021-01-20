@@ -1,8 +1,0 @@
-Production:
-  <<: *defaults
-  user: hysgntpnxrbvds
-  password: 7c8f7a899b09fe01cadc799c63297c4bdea42d9259a98aa39977f3d966ca4007
-  host: ec2-52-2-82-109.compute-1.amazonaws.com
-  port: 5432
-  database: d82k4pph4e23kb
-  sslmode: require
