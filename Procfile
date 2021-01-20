@@ -1,0 +1,1 @@
+web: ./dist/build/backend/backend production -p $PORT
