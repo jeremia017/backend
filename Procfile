@@ -1,1 +1,1 @@
-web: ./dist/build/backend/backend production -p $PORT
+web: /app/.local/bin/backend production -p $PORT
