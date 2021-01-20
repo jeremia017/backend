@@ -1,1 +1,1 @@
-web: /app/.local/bin/backend main -p $PORT
+web: /app/.local/bin/backend -p $PORT
