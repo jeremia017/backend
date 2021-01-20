@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0015a4ebc2d509c312fbacdb9e4fd27ae6e9fbc70512627b3e30c08eb57c0bcf
+-- hash: 421aa60af7c5f71ad4694df5068d3a490e7c0e5f7deed2be918da5ff26dcd832
 
 name:           backend
 version:        0.0.0
@@ -28,6 +28,7 @@ library
       Handler.Common
       Handler.Home
       Handler.Profile
+      Handler.Recommendation
       Import
       Import.NoFoundation
       Model
@@ -68,6 +69,7 @@ library
     , unordered-containers
     , vector
     , wai
+    , wai-cors
     , wai-extra >=3.0 && <3.1
     , wai-logger >=2.2 && <2.4
     , warp >=3.0 && <3.4
